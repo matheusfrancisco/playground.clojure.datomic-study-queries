@@ -30,6 +30,32 @@
 (defn create-schema [conn]
   (d/transact conn schema))
 
+(defn all-product [db]
+  (d/q '[:find ?entidade
+         :where [?entidade :product/name]] db))
+
+
+;;extrair a query em uma def ou let
+;porem ..-q é notacao hungara indica o TIPO não parece ser legal
+;em clojure
+;vai encontrar em exemplos e documentacao
+;nao é recomendado ainda menos abreviada
+(def all-product-by-slug-q
+  '[:find ?entidade
+    :where [?entidade :product/slug "/notebook"]])
+
+
+(defn db/all-product-by-slug-fixo [db]
+  (d/q all-product-by-slug-q db))
+
+;;nao estou usando notacao hungara e extract
+; eh comum no sql string "selec * from slug=::SLUG::"
+;conexao.query(sql, {::SLUG:: "/notebook"})
+(defn db/all-product-by-slug [db slug]
+  (d/q '[:find ?entidade
+         :in $ ?slug-searched
+         :where [?entidade :product/slug ?slug-searched]]
+       db slug))
 ;Product
 ; id?
 ; name String 1 ==> Notebook
