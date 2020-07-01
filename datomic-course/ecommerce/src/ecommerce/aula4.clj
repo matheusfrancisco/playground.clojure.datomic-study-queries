@@ -1,4 +1,4 @@
-(ns ecommerce.aula3
+(ns ecommerce.aula4
   (:use clojure.pprint)
   (:require [datomic.api :as d]
             [ecommerce.db :as db]
@@ -23,33 +23,13 @@
 (def  calculadora {:produto/nome "Calculadora com 4 operações"})
 (def celular-barato (model/novo-produto "Celular Barato", "/celular-barato", 0.1M))
 (def xadrez (model/novo-produto "Trabuleiro de  xadrez" "/tabuleir-de-xadrez" 30M ))
-
 (pprint @(db/adiciona-produtos! conn [computador, celular, calculadora, celular-barato, xadrez]))
-
-;(pprint (db/todos-os-produtos (d/db conn)))
-(def produtos (db/todos-os-produtos (d/db conn)))
-(pprint produtos)
-
 
 (db/atribui-categorias! conn [computador celular celular-barato] eletronicos)
 (db/atribui-categorias! conn [xadrez] esporte)
 
+;(pprint (db/todos-os-produtos (d/db conn)))
+(pprint (db/todos-os-nomes-de-produtos-e-categorias (d/db conn)))
+(pprint (db/todos-os-produtos-da-categoria (d/db conn) "Eletrônicos"))
 
-(pprint (d/transact conn [[:db/add
-                   [:produto/id (:produto/id computador)]
-                   :produto/categoria
-                   [:categoria/id (:categoria/id eletronicos)]]]))
-
-(pprint (db/um-produto (d/db conn) (:produto/id computador)))
-
-(pprint (db/um-produto (d/db conn) (:produto/id celular)))
-
-(pprint (db/um-produto (d/db conn) (:produto/id celular-barato)))
-
-(pprint (db/um-produto (d/db conn) (:produto/id xadrez)))
-
-(def produtos (db/todos-os-produtos (d/db conn)))
-(pprint produtos)
-
-
-(db/apaga-banco!)
+;(db/apaga-banco!)
