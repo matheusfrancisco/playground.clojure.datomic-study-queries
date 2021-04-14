@@ -34,4 +34,4 @@
 
 ;;(pprint (count (db/all-product-with-pull-generic (d/db-as-of (d/db conn) #inst "2020-01-18t17:35:34.200"))))
 
-(db/delete-db)
+;(db/delete-db)

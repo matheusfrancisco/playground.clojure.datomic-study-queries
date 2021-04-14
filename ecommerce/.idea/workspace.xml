@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4de782f0-d2a9-485e-8ded-c566e3195a02" name="Default Changelist" comment="" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,38 +12,55 @@
   </component>
   <component name="ProjectId" id="1ddgLzKTHsARLxTeXL7Fe6W5o57" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
   </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ReplState" timestamp="1618431884464">{:repl-history {:ide [], :local [{:command &quot;ns&quot;, :offset 2, :ns &quot;ecommerce.core&quot;} {:command &quot;*ns*&quot;, :offset 4, :ns &quot;ecommerce.core&quot;} {:command &quot;  (def conn (db/open-connection))\n&quot;, :offset 34, :ns &quot;ecommerce.core&quot;} {:command &quot;(pprint (db/all-product-by-minimal-price (d/db conn) 1000))&quot;, :offset 59, :ns &quot;ecommerce.core&quot;} {:command &quot;(pprint (db/all-product-by-minimal-price (d/db conn) 5000))&quot;, :offset 59, :ns &quot;ecommerce.core&quot;} {:command &quot;(pprint (db/all-product-by-minimal-price-restritiva (d/db conn) 5000))&quot;, :offset 70, :ns &quot;ecommerce.core&quot;} {:command &quot;(d/transact conn [[:db/add 17592186045418 :product/keywords \&quot;desktop\&quot;]\n                    [:db/add 17592186045418 :product/keywords \&quot;computador\&quot;]])&quot;, :offset 148, :ns &quot;ecommerce.core&quot;} {:command &quot;(d/transact conn [[:db/retract 17592186045418 :product/keywords \&quot;desktop\&quot;]])&quot;, :offset 76, :ns &quot;ecommerce.core&quot;} {:command &quot;(pprint (db/all-product-by-keywords (d/db conn) \&quot;computador\&quot;))&quot;, :offset 62, :ns &quot;ecommerce.core&quot;} {:command &quot;(let [cheap-mobile (model/new-product \&quot;Cheap Mobile\&quot;, \&quot;/cheap_mobile\&quot;, 8888.88M)]\n    (pprint (d/transact conn [cheap-mobile])))&quot;, :offset 128, :ns &quot;ecommerce.core&quot;} {:command &quot;(let [cheap-mobile (model/new-product \&quot;Cheap Mobile\&quot;, \&quot;/cheap_mobile\&quot;, 8888.88M)\n        result @(d/transact conn [cheap-mobile])]\n    (pprint result))&quot;, :offset 151, :ns &quot;ecommerce.core&quot;} {:command &quot;(let [cheap-mobile (model/new-product \&quot;Cheap Mobile\&quot;, \&quot;/cheap_mobile\&quot;, 8888.88M)\n        result @(d/transact conn [cheap-mobile])]\n    (pprint (first (vals result))))&quot;, :offset 166, :ns &quot;ecommerce.core&quot;} {:command &quot;(let [cheap-mobile (model/new-product \&quot;Cheap Mobile\&quot;, \&quot;/cheap_mobile\&quot;, 8888.88M)\n        result @(d/transact conn [cheap-mobile])]\n    (pprint (first (vals (:tempids result)))))&quot;, :offset 177, :ns &quot;ecommerce.core&quot;} {:command &quot;(let [cheap-mobile (model/new-product \&quot;Cheap Mobile\&quot;, \&quot;/cheap_mobile\&quot;, 8888.88M)\n        result @(d/transact conn [cheap-mobile])\n        entity-id (first (vals (:tempids result)))]\n    (pprint result)\n    (print @(d/transact conn [[:db/add entity-id :product/price 0.1M]])))&quot;, :offset 275, :ns &quot;ecommerce.core&quot;} {:command &quot;(let [cheap-mobile (model/new-product \&quot;Cheap Mobile\&quot;, \&quot;/cheap_mobile\&quot;, 8888.88M)\n        result @(d/transact conn [cheap-mobile])\n        entity-id (first (vals (:tempids result)))]\n    (pprint result)\n    (pprint @(d/transact conn [[:db/add entity-id :product/price 0.1M]])))&quot;, :offset 276, :ns &quot;ecommerce.core&quot;} {:command &quot;(let [cheap-mobile (model/new-product \&quot;Cheap Mobile\&quot;, \&quot;/cheap_mobile\&quot;, 8888.88M)\n        result @(d/transact conn [cheap-mobile])\n        entity-id (first (vals (:tempids result)))]\n    (pprint result)\n    (pprint @(d/transact conn [[:db/add entity-id :product/price 0.1M]]))\n    (pprint @(d/transact conn [[:db/retract entity-id :product/slug \&quot;/cheap_modbile\&quot;]])))&quot;, :offset 365, :ns &quot;ecommerce.core&quot;} {:command &quot;(let [cheap-mobile (model/new-product \&quot;Cheap Mobile\&quot;, \&quot;/cheap_mobile\&quot;, 8888.88M)\n        result @(d/transact conn [cheap-mobile])\n        entity-id (first (vals (:tempids result)))]\n    (pprint result)\n    (pprint @(d/transact conn [[:db/add entity-id :product/price 0.1M]]))\n    (pprint @(d/transact conn [[:db/retract entity-id :product/slug \&quot;/cheap_mobile\&quot;]])))&quot;, :offset 364, :ns &quot;ecommerce.core&quot;} {:command &quot;(let [notebook (model/new-product \&quot;Notebook\&quot; \&quot;/notebook\&quot; 3550.89M)\n        celular (model/new-product \&quot;Celular\&quot; \&quot;/celular\&quot; 5550.89M)\n        calc {:product/name \&quot;Calculadora\&quot;}\n        celular-barato (model/new-product \&quot;Celular Barato\&quot; \&quot;/celular-barato\&quot; 0.9M)\n        resultado @(d/transact conn [notebook celular calc celular-barato])]\n    (pprint resultado))&quot;, :offset 359, :ns &quot;ecommerce.core&quot;} {:command &quot;(pprint (db/all-product-with-pull-generic (d/db conn)))&quot;, :offset 55, :ns &quot;ecommerce.core&quot;} {:command &quot;(db/delete-db)&quot;, :offset 14, :ns &quot;ecommerce.aula3&quot;} {:command &quot;(def conn (db/open-connection))&quot;, :offset 31, :ns &quot;ecommerce.aula3&quot;} {:command &quot;(db/create-schema conn)&quot;, :offset 23, :ns &quot;ecommerce.aula3&quot;}], :remote []}}</component>
   <component name="RunManager">
-    <configuration default="true" type="ClojureREPL" factoryName="Local" activateToolWindowBeforeRun="false">
+    <configuration name="REPL" type="ClojureREPL" factoryName="Local" activateToolWindowBeforeRun="false">
+      <module name="ecommerce" />
+      <setting name="displayName" value="REPL" />
       <setting name="replType" value="NREPL" />
       <setting name="execution" value="LEININGEN" />
-      <module name="" />
+      <setting name="jvmArgs" value="" />
+      <setting name="parameters" value="" />
+      <setting name="workingDir" value="$PROJECT_DIR$" />
+      <setting name="profiles" value="" />
+      <setting name="aliases" value="" />
+      <setting name="fixLineNumbers" value="false" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="ClojureREPL" factoryName="Local" activateToolWindowBeforeRun="false">
+      <setting name="displayName" value="" />
+      <setting name="replType" value="NREPL" />
+      <setting name="execution" value="LEININGEN" />
       <setting name="jvmArgs" value="" />
       <setting name="parameters" value="" />
       <setting name="workingDir" value="" />
       <setting name="profiles" value="" />
       <setting name="aliases" value="" />
+      <setting name="fixLineNumbers" value="false" />
       <method v="2" />
     </configuration>
     <configuration default="true" type="ClojureREPL" factoryName="Remote" activateToolWindowBeforeRun="false">
+      <setting name="displayName" value="" />
       <setting name="host" value="" />
       <setting name="port" value="0" />
-      <setting name="replType" value="0" />
-      <module name="" />
+      <setting name="replType" value="NREPL" />
+      <setting name="configType" value="SPECIFY" />
+      <setting name="replPortFileType" value="STANDARD" />
+      <setting name="customPortFile" value="" />
+      <setting name="fixLineNumbers" value="false" />
       <method v="2" />
     </configuration>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -68,5 +84,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>
